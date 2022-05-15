@@ -1,4 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Sirenix.OdinInspector;
+using DG.Tweening;
+using Cinemachine;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -16,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isFlashOn;
     private Animator anim;
     //private RaycastHit hit;
-    
+
     public Transform cameraTransform;
 
     // boxcast var
@@ -31,7 +37,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         //Choose the distance the Box can reach to
-        m_MaxDistance = 1.5f;
+        m_MaxDistance = 4f;
     }
     private void FixedUpdate()
     {
@@ -50,20 +56,20 @@ public class PlayerController : MonoBehaviour
                 m_Hit.transform.GetComponent<Interaction>().StartItemEvent();
             }
 
-            if (m_Hit.transform.CompareTag("Closet") && Input.GetKeyDown(KeyCode.C))
+            if (m_Hit.transform.CompareTag("Move") && Input.GetKeyDown(KeyCode.C))
             {
-                m_Hit.transform.GetComponent<Interaction>().StartClosetEvent();
+                m_Hit.transform.GetComponent<Interaction>().StartMoveEvent();
             }
 
-            if (m_Hit.transform.CompareTag("Door") && Input.GetKeyDown(KeyCode.C))
+            if (m_Hit.transform.CompareTag("Rotation") && Input.GetKeyDown(KeyCode.C))
             {
-                m_Hit.transform.GetComponent<Interaction>().StartDoorEvent();
+                m_Hit.transform.GetComponent<Interaction>().StartRotationEvent();
             }
 
 
-            if (m_Hit.transform.CompareTag("Desk") && Input.GetKeyDown(KeyCode.C))
+            if (m_Hit.transform.CompareTag("Trigger") && Input.GetKeyDown(KeyCode.C))
             {
-                m_Hit.transform.GetComponent<Interaction>().StartDeskEvent();
+                m_Hit.transform.GetComponent<Interaction>().StartTriggerEvent();
             }
         }
     }
@@ -104,7 +110,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (InputManager.Instance.GetPlayerStatus() == PLAYERSTATUS.WALK)
-        { 
+        {
             if (!walkPlayer)
             {
                 playerSpeed = 2.0f;
@@ -139,7 +145,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(InputManager.Instance.GetPlayerStatus() == PLAYERSTATUS.IDLE)
+        if (InputManager.Instance.GetPlayerStatus() == PLAYERSTATUS.IDLE)
         {
             if (!idlePlayer)
             {
@@ -167,11 +173,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            
+
 
         }
 
-            Vector2 movement = InputManager.Instance.GetPlayerMovement();
+        Vector2 movement = InputManager.Instance.GetPlayerMovement();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         move = cameraTransform.forward * move.z + cameraTransform.right * move.x;
         move.y = 0;
@@ -215,7 +221,7 @@ public class PlayerController : MonoBehaviour
         //If there hasn't been a hit yet, draw the ray at the maximum distance
         else
         {
-            
+
         }
     }
 }

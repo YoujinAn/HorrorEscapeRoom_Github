@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1569762, g: 0.07929192, b: 0.08068607, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1186,7 +1186,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.248555, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1574,7 +1574,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.248555, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3578,7 +3578,7 @@ MonoBehaviour:
   isConversation: 0
   item: {fileID: 0}
   moveAxis: 1
-  moveDist: 1
+  moveDist: -1
   moveTF: {fileID: 693752689}
   rotateTF: {fileID: 0}
   goalRotation: 0
@@ -10383,7 +10383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.248555, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11105,7 +11105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 1
 --- !u!114 &114000012087708012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11118,7 +11117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3174ace299f2b4c80baf44a6283329cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reachRange: 1.8
 --- !u!114 &114000013748487190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11131,7 +11129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 2
 --- !u!114 &114000013845695244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11144,7 +11141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 1
 --- !u!114 &114000014310892156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11157,4 +11153,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectNumber: 2

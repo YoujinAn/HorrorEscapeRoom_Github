@@ -166,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 1953170}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7e0043553097dc34e867f52b292bb164, type: 3}
-  m_Controller: {fileID: 9100000, guid: d14a770298e2e2243916dbdcd5132628, type: 2}
+  m_Controller: {fileID: 9100000, guid: f5ba8c2b4d609d04883a40a2fe6fb919, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   playerSpeed: 2
   flashLight: {fileID: 1844529978}
   cameraTransform: {fileID: 56689650}
+  m_MaxDistance: 3
 --- !u!4 &1953175
 Transform:
   m_ObjectHideFlags: 0
@@ -2189,11 +2190,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-<<<<<<< HEAD
     m_SensorSize: {x: 0.96018964, y: 1}
-=======
-    m_SensorSize: {x: 1.3509804, y: 1}
->>>>>>> feature/Teddy_part
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2495,11 +2492,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-<<<<<<< HEAD
     m_SensorSize: {x: 0.96018964, y: 1}
-=======
-    m_SensorSize: {x: 1.3509804, y: 1}
->>>>>>> feature/Teddy_part
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2767,11 +2760,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-<<<<<<< HEAD
     m_SensorSize: {x: 0.96018964, y: 1}
-=======
-    m_SensorSize: {x: 1.3509804, y: 1}
->>>>>>> feature/Teddy_part
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 652f0cfe91e45a6498c081fa0b2fda65, type: 3}
-  m_Name: Conv3
+  m_Name: Conv4
   m_EditorClassIdentifier: 
-  convNum: 3
+  convNum: 4
   allLines:
   - dialogue:
-    - "\uC544\uC774\uD15C 3 \uC785\uB2C8\uB2E4."
+    - "\uD5C9\uD5C9..."
   - dialogue:
-    - "\uC5B4\uB5BB\uAC8C \uC4F0\uC9C0?"
-  isEnd: 0
+    - "\uC660\uC9C0 \uAD49\uC7A5\uD788 \uAE30\uBD84 \uB098\uC05C \uAFC8\uC744 \uAFBC
+      \uAC83 \uAC19\uB2E4."
+  - dialogue:
+    - "\uAE30\uC5B5\uC774 \uB098\uC9C0\uB294 \uC54A\uC9C0\uB9CC \uC9C4\uC9DC \uAC19\uC558\uC5B4..."
+  isEnd: 1

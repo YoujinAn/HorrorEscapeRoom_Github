@@ -7,6 +7,7 @@ public class Conversation : ScriptableObject
 {
     public int convNum;
     public DialogueLine[] allLines;
+    public bool isEnd = false;
 
     public DialogueLine GetLineByIndex(int index)
     {

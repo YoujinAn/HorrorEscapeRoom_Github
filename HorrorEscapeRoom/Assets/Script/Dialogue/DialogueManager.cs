@@ -128,6 +128,7 @@ public class DialogueManager : MonoBehaviour
 
     public void CloseDialogueWindow()
     {
+        curConversation.isEnd = true;
         prevConversation = curConversation;
         prevIndex = curIndex;
 

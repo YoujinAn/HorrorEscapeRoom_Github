@@ -15,7 +15,7 @@ public class OpeningControl : MonoBehaviour
     public Image screenImage;
     public CinemachineDollyCart dollyCart;
 
-    public bool bStart;
+    public bool bStart = false;
     public bool bOpeningStart;
     public float alpha;
 
@@ -26,6 +26,7 @@ public class OpeningControl : MonoBehaviour
         virCam.SetActive(false);
         virStopCam.SetActive(false);
         alpha = 1;
+        DialogueManager.Instance.convs[3].isEnd = false;
         DialogueManager.Instance.StartConversation(3);
     }
 
@@ -48,6 +49,8 @@ public class OpeningControl : MonoBehaviour
                 eventCam.SetActive(false);
                 GameManager.Instance.playerCanControl = true;
                 playerObj.SetActive(true);
+                DialogueManager.Instance.StartConversation(4);
+                Destroy(gameObject);
             }
         }
 
@@ -65,5 +68,10 @@ public class OpeningControl : MonoBehaviour
                 dollyCart.m_Speed = 1;
             }
         }
+
+       if(Input.GetKeyDown(KeyCode.O))
+       {
+           DialogueManager.Instance.StartConversation(4);
+       }
     }
 }

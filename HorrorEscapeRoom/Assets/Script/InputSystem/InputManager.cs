@@ -98,7 +98,7 @@ public class InputManager : MonoBehaviour
         }
         else if (GetPlayerMovement().x < 0 || GetPlayerMovement().y < 0)
         {
-            playerStatus = PLAYERSTATUS.BACKWALK;
+            playerStatus = PLAYERSTATUS.WALK;
         }
         else
         {

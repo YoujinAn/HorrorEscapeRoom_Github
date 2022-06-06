@@ -153,27 +153,24 @@ public class Interaction : MonoBehaviour
     }
     public void StartTriggerEvent()
     {
+        if (activeObj)
+        {
+            trigger = true;
+            activeObj = false;
+        }
+        else
+        {
+            trigger = false;
+            activeObj = true;
+        }
 
-        //GameManager.Instance.playerCanControl = false;
-
-        //if (activeObj)
-        //{
-        //    closetTf.DORotate(new Vector3(deskTf.rotation.x, 0, deskTf.rotation.z), time);
-        //    activeObj = false;
-        //}
-        //else
-        //{
-        //    closetTf.DORotate(new Vector3(deskTf.rotation.x, goalRotation, deskTf.rotation.z), time);
-        //    activeObj = true;
-        //}
-
-        //if (isConversation)
-        //{
-        //    DialogueManager.Instance.StartConversation(convNum);
-        //}
-        //else
-        //{
-        //    Invoke("ReStartControl", time);
-        //}
+        if (isConversation)
+        {
+            DialogueManager.Instance.StartConversation(convNum);
+        }
+        else
+        {
+            Invoke("ReStartControl", time);
+        }
     }
 }

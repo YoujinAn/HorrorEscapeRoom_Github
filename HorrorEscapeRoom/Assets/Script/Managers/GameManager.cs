@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,4 +30,9 @@ public class GameManager : MonoBehaviour
     public bool playerCanControl = true;
     public int curDiagNum;
     public List<int> invItemIdxList;
+
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }

@@ -27,7 +27,6 @@ public class OnMenu : MonoBehaviour {
 				MenuCanvas.SetActive(true);
 				_Menu.OptionsParentObject.SetActive (false);
 				_Menu.CreditsParentObject.SetActive (false);
-				_Menu.SaveLoadParentObject.SetActive (false);
 				_Menu.MenuParentObject.SetActive (true);
 			}
 		}

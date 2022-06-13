@@ -171,6 +171,8 @@ public class DialogueManager : MonoBehaviour
                 isTyping = false;
                 StopCoroutine(typing);
             }
+
+            SoundManager.instance.Play("Button");
         }
     }
 }

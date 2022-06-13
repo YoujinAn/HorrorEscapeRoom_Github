@@ -8,10 +8,8 @@ public class LoadSave : MonoBehaviour {
 	public Vector3 ZeroPosition;
 	public Text[] ButtonsSaved;
 	public SavedTriggers _SavedTriggers;
-	public Menu _Menu;
 	// Use this for initialization
 	void Start () {
-		_Menu = Camera.main.GetComponent<Menu> ();
 		int NmSav = PlayerPrefs.GetInt ("NmSav");
 		//print (System.Convert.ToString(System.DateTime.Now));
 		if (PlayerPrefs.GetInt ("Load") == 1) {
@@ -27,8 +25,6 @@ public class LoadSave : MonoBehaviour {
 	}
 	
 	public void PlayerSaved (int numSaved) {
-		_Menu._AudioSource.clip = _Menu.ClickClip;
-		_Menu._AudioSource.Play ();
 		PlayerPrefs.SetFloat ("LoadX"+System.Convert.ToString(numSaved), Player.transform.position.x);
 		PlayerPrefs.SetFloat ("LoadY"+System.Convert.ToString(numSaved), Player.transform.position.y);
 		PlayerPrefs.SetFloat ("LoadZ"+System.Convert.ToString(numSaved), Player.transform.position.z);

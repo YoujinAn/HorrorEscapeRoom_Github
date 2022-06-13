@@ -54,22 +54,26 @@ public class PlayerController : MonoBehaviour
             if (m_Hit.transform.CompareTag("Item") && Input.GetKeyDown(KeyCode.C))
             {
                 m_Hit.transform.GetComponent<Interaction>().StartItemEvent();
+                ES3AutoSaveMgr.Current.Save();
             }
 
             if (m_Hit.transform.CompareTag("Move") && Input.GetKeyDown(KeyCode.C))
             {
                 m_Hit.transform.GetComponent<Interaction>().StartMoveEvent();
+                ES3AutoSaveMgr.Current.Save();
             }
 
             if (m_Hit.transform.CompareTag("Rotation") && Input.GetKeyDown(KeyCode.C))
             {
                 m_Hit.transform.GetComponent<Interaction>().StartRotationEvent();
+                ES3AutoSaveMgr.Current.Save();
             }
 
 
             if (m_Hit.transform.CompareTag("Trigger") && Input.GetKeyDown(KeyCode.C))
             {
                 m_Hit.transform.GetComponent<Interaction>().StartTriggerEvent();
+                ES3AutoSaveMgr.Current.Save();
             }
         }
     }

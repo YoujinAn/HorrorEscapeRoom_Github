@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         //Test to see if there is a hit using a BoxCast
         //Calculate using the center of the GameObject's Collider(could also just use the GameObject's position), half the GameObject's size, the direction, the GameObject's rotation, and the maximum distance as variables.
         //Also fetch the hit data
-        m_HitDetect = Physics.BoxCast(CameraManager.Instance.virCam.transform.position, transform.localScale / 5, cameraTransform.forward, out m_Hit, transform.rotation, m_MaxDistance);
+        m_HitDetect = Physics.BoxCast(CameraManager.Instance.virCam.transform.position, transform.localScale / 10, cameraTransform.forward, out m_Hit, transform.rotation, m_MaxDistance);
 
         //Output the name of the Collider your Box hit
         //Debug.Log("Hit : " + m_Hit.collider.name);
@@ -220,7 +220,7 @@ public class PlayerController : MonoBehaviour
             //Draw a Ray forward from GameObject toward the hit
             Gizmos.DrawRay(CameraManager.Instance.virCam.transform.position, cameraTransform.forward * m_Hit.distance);
             //Draw a cube that extends to where the hit exists
-            Gizmos.DrawWireCube(CameraManager.Instance.virCam.transform.position + cameraTransform.forward * m_Hit.distance, transform.localScale / 5);
+            Gizmos.DrawWireCube(CameraManager.Instance.virCam.transform.position + cameraTransform.forward * m_Hit.distance, transform.localScale / 10);
         }
         //If there hasn't been a hit yet, draw the ray at the maximum distance
         else
